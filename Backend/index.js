@@ -19,7 +19,7 @@ app.post('/insert',function(req,res){
     console.log("office:" +req.body.officelocation,)
     console.log(req.body)
 
-    if (req.body.name === undefined)
+    if (req.body.employeename === undefined)
         res.status(500).send("Name is not present");
 
     var employee ={
