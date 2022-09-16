@@ -14,7 +14,13 @@ app.post('/insert',function(req,res){
     res.header("Access-Control-Allow-Origin",'*');
     res.header("Access-Control-Allow-method:GET,POST,PUT,DELETE");
     console.log("this is");
-    console.log(req.body.employeename)
+    console.log("name:" +req.body.employeename)
+    console.log("position:" +req.body.position,)
+    console.log("office:" +req.body.officelocation,)
+    console.log(req.body)
+
+    if (req.body.name === undefined)
+        res.status(500).send("Name is not present");
 
     var employee ={
         name:req.body.employeename,

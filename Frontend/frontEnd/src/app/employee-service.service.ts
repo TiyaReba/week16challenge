@@ -10,8 +10,12 @@ export class EmployeeServiceService {
 
   addEmployees(item:any){
     console.log("inside addemployees")
-    return this.http.post('http://localhost:3000/insert',{item})
-     .subscribe(data =>{console.log(data)})
+    return this.http.post('http://localhost:3000/insert',item)
+    // {name : item.employeename,
+    // position : item.position,
+    // salary : item.salary,
+    // office : item.officelocation})
+    .subscribe(data =>{console.log(data)})
 
   }
   
